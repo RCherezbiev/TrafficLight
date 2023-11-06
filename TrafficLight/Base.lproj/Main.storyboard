@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,36 +13,35 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="mbM-0i-F6v">
-                                <rect key="frame" x="121.66666666666669" y="79" width="150" height="530"/>
+                            <stackView contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0na-7r-ns0">
+                                <rect key="frame" x="140" y="79" width="150" height="490"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z81-8k-ByM">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1VE-5G-ZKW">
-                                        <rect key="frame" x="0.0" y="190" width="150" height="150"/>
+                                        <rect key="frame" x="0.0" y="170" width="150" height="150"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mv3-Ux-5QI">
-                                        <rect key="frame" x="0.0" y="380" width="150" height="150"/>
+                                        <rect key="frame" x="0.0" y="340" width="150" height="150"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="530" id="FTA-4k-eBY"/>
-                                    <constraint firstAttribute="width" constant="150" id="LKR-YA-SDg"/>
+                                    <constraint firstAttribute="height" constant="490" id="pCP-J7-0Rb"/>
+                                    <constraint firstAttribute="width" constant="150" id="xEk-v9-RWT"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wvs-uL-otb">
-                                <rect key="frame" x="121" y="680" width="150" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wvs-uL-otb">
+                                <rect key="frame" x="140" y="739" width="150" height="47"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.80000000000000004" height="1"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
@@ -55,9 +54,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mbM-0i-F6v" secondAttribute="trailing" constant="121.5" id="ITi-xD-muL"/>
-                            <constraint firstItem="mbM-0i-F6v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="NbB-Yq-kCf"/>
-                            <constraint firstItem="mbM-0i-F6v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121.5" id="dPD-MP-o2n"/>
+                            <constraint firstItem="0na-7r-ns0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="HsO-Ou-xb3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wvs-uL-otb" secondAttribute="trailing" constant="140" id="KzZ-rY-Ys9"/>
+                            <constraint firstItem="0na-7r-ns0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="YRT-jr-uAe"/>
+                            <constraint firstItem="Wvs-uL-otb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="btA-Bt-PNl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Wvs-uL-otb" secondAttribute="bottom" constant="112" id="jjc-01-jO7"/>
                         </constraints>
                     </view>
                     <connections>
@@ -69,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="129.76744186046511" y="-27.682403433476395"/>
         </scene>
     </scenes>
     <resources>
