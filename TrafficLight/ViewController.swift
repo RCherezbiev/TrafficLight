@@ -26,11 +26,14 @@ final class ViewController: UIViewController {
     }
 
     @IBAction func switchTrafficLight(_ sender: UIButton) {
+        sender.setTitle("NEXT", for: .normal)
+        
         if redTrafficLight.alpha == 0.3 {
             redTrafficLight.alpha = 1
         } else if redTrafficLight.alpha == 1{
             redTrafficLight.alpha = 0.3
             orangeTrafficLight.alpha = 1
+            sender.setTitle("NEXT", for: .normal)
         } else if orangeTrafficLight.alpha == 1 {
             orangeTrafficLight.alpha = 0.3
             greenTrafficLight.alpha = 1
@@ -39,6 +42,5 @@ final class ViewController: UIViewController {
             redTrafficLight.alpha = 1
         }
     }
-    
 }
 
