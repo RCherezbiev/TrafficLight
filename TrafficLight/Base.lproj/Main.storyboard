@@ -16,49 +16,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0na-7r-ns0">
-                                <rect key="frame" x="140" y="79" width="150" height="490"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="mOf-5o-8mn">
+                                <rect key="frame" x="175" y="79" width="80" height="407"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z81-8k-ByM">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1VE-5G-ZKW">
-                                        <rect key="frame" x="0.0" y="170" width="150" height="150"/>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mv3-Ux-5QI">
-                                        <rect key="frame" x="0.0" y="340" width="150" height="150"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                    </view>
+                                    <stackView contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0na-7r-ns0">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="280"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z81-8k-ByM">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="rbk-u2-qtO"/>
+                                                    <constraint firstAttribute="width" constant="80" id="u03-Ua-Kq1"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1VE-5G-ZKW">
+                                                <rect key="frame" x="0.0" y="100" width="80" height="80"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mv3-Ux-5QI">
+                                                <rect key="frame" x="0.0" y="200" width="80" height="80"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wvs-uL-otb">
+                                        <rect key="frame" x="3.6666666666666572" y="360" width="73" height="47"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.80000000000000004" height="1"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="switchTrafficLight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Ab-q8-p89"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="490" id="pCP-J7-0Rb"/>
-                                    <constraint firstAttribute="width" constant="150" id="xEk-v9-RWT"/>
-                                </constraints>
+                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wvs-uL-otb">
-                                <rect key="frame" x="140" y="739" width="150" height="47"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                <rect key="contentStretch" x="0.0" y="0.0" width="0.80000000000000004" height="1"/>
-                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="30"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="switchTrafficLight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Ab-q8-p89"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0na-7r-ns0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="HsO-Ou-xb3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wvs-uL-otb" secondAttribute="trailing" constant="140" id="KzZ-rY-Ys9"/>
-                            <constraint firstItem="0na-7r-ns0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="YRT-jr-uAe"/>
-                            <constraint firstItem="Wvs-uL-otb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="btA-Bt-PNl"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Wvs-uL-otb" secondAttribute="bottom" constant="112" id="jjc-01-jO7"/>
+                            <constraint firstItem="mOf-5o-8mn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9RQ-eB-mhN"/>
+                            <constraint firstItem="mOf-5o-8mn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Gid-QP-Aay"/>
                         </constraints>
                     </view>
                     <connections>

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
     @IBOutlet var redTrafficLight: UIView!
     @IBOutlet var orangeTrafficLight: UIView!
@@ -16,9 +16,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        redTrafficLight.layer.cornerRadius = 75
-        orangeTrafficLight.layer.cornerRadius = 75
-        greenTrafficLight.layer.cornerRadius = 75
+        redTrafficLight.layer.cornerRadius = 40
+        orangeTrafficLight.layer.cornerRadius = 40
+        greenTrafficLight.layer.cornerRadius = 40
         nextLightButton.layer.cornerRadius = 10
         redTrafficLight.alpha = 0.3
         orangeTrafficLight.alpha = 0.3
