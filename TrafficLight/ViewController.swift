@@ -7,40 +7,56 @@
 
 import UIKit
 
+enum CurrentLight {
+    case red, orange, green
+}
+
 final class ViewController: UIViewController {
 
-    @IBOutlet var redTrafficLight: UIView!
-    @IBOutlet var orangeTrafficLight: UIView!
-    @IBOutlet var greenTrafficLight: UIView!
+    @IBOutlet var redView: UIView!
+    @IBOutlet var orangeView: UIView!
+    @IBOutlet var greenView: UIView!
+    
     @IBOutlet var nextLightButton: UIButton!
+    
+    private var currentLight = CurrentLight.red
+    private let lightOn = 1.0
+    private let lightOff = 0.3
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        redTrafficLight.layer.cornerRadius = 40
-        orangeTrafficLight.layer.cornerRadius = 40
-        greenTrafficLight.layer.cornerRadius = 40
+        redView.alpha = lightOff
+        orangeView.alpha = lightOff
+        greenView.alpha = lightOff
+        
+        redView.layer.cornerRadius = redView.frame.height / 2
+        orangeView.layer.cornerRadius = orangeView.frame.height / 2
+        greenView.layer.cornerRadius = greenView.frame.height / 2
+        
         nextLightButton.layer.cornerRadius = 10
-        redTrafficLight.alpha = 0.3
-        orangeTrafficLight.alpha = 0.3
-        greenTrafficLight.alpha = 0.3
+        
     }
 
-    @IBAction func switchTrafficLight(_ sender: UIButton) {
-        sender.setTitle("NEXT", for: .normal)
-        
-        if redTrafficLight.alpha == 0.3 {
-            redTrafficLight.alpha = 1
-        } else if redTrafficLight.alpha == 1{
-            redTrafficLight.alpha = 0.3
-            orangeTrafficLight.alpha = 1
-            sender.setTitle("NEXT", for: .normal)
-        } else if orangeTrafficLight.alpha == 1 {
-            orangeTrafficLight.alpha = 0.3
-            greenTrafficLight.alpha = 1
-        } else {
-            greenTrafficLight.alpha = 0.3
-            redTrafficLight.alpha = 1
+    @IBAction func switchTrafficLight() {
+        if nextLightButton.currentTitle == "START" {
+            nextLightButton.setTitle("NEXT", for: .normal)
         }
+        
+        switch currentLight {
+        case .red:
+            greenView.alpha = lightOff
+            redView.alpha = lightOn
+            currentLight = CurrentLight.orange
+        case .orange:
+            redView.alpha = lightOff
+            orangeView.alpha = lightOn
+            currentLight = CurrentLight.green
+        case .green:
+            orangeView.alpha = lightOff
+            greenView.alpha = lightOn
+            currentLight = CurrentLight.red
+        }
+        
     }
 }
 

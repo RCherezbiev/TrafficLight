@@ -16,63 +16,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="mOf-5o-8mn">
-                                <rect key="frame" x="175" y="79" width="80" height="410"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="FJD-gr-LJ1">
+                                <rect key="frame" x="140" y="79" width="150" height="530"/>
                                 <subviews>
-                                    <stackView contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0na-7r-ns0">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="280"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z81-8k-ByM">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="80" id="rbk-u2-qtO"/>
-                                                    <constraint firstAttribute="width" constant="80" id="u03-Ua-Kq1"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1VE-5G-ZKW">
-                                                <rect key="frame" x="0.0" y="100" width="80" height="80"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mv3-Ux-5QI">
-                                                <rect key="frame" x="0.0" y="200" width="80" height="80"/>
-                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                            </view>
-                                        </subviews>
-                                    </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wvs-uL-otb">
-                                        <rect key="frame" x="0.0" y="360" width="80" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.80000000000000004" height="1"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z81-8k-ByM">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="PDW-wX-rmZ"/>
-                                            <constraint firstAttribute="width" constant="80" id="Pme-Rp-XFs"/>
+                                            <constraint firstAttribute="width" secondItem="Z81-8k-ByM" secondAttribute="height" multiplier="1:1" id="doO-Tm-lT9"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="20"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="START">
-                                            <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="switchTrafficLight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Ab-q8-p89"/>
-                                        </connections>
-                                    </button>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1VE-5G-ZKW">
+                                        <rect key="frame" x="0.0" y="190" width="150" height="150"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mv3-Ux-5QI">
+                                        <rect key="frame" x="0.0" y="380" width="150" height="150"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </view>
                                 </subviews>
-                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wvs-uL-otb">
+                                <rect key="frame" x="140" y="833" width="150" height="36"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.80000000000000004" height="1"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="switchTrafficLight" destination="BYZ-38-t0r" eventType="touchUpInside" id="ejC-64-RcH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="mOf-5o-8mn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9RQ-eB-mhN"/>
-                            <constraint firstItem="mOf-5o-8mn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Gid-QP-Aay"/>
+                            <constraint firstItem="FJD-gr-LJ1" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.56867" id="Agq-0O-7RE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wvs-uL-otb" secondAttribute="trailing" constant="140" id="LHT-Gh-q2h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Wvs-uL-otb" secondAttribute="bottom" constant="29" id="S8A-Jd-OxG"/>
+                            <constraint firstItem="FJD-gr-LJ1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="WdT-T0-zX2"/>
+                            <constraint firstItem="FJD-gr-LJ1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lEw-uJ-QS6"/>
+                            <constraint firstItem="Wvs-uL-otb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="vKe-Jb-GOv"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="greenTrafficLight" destination="Mv3-Ux-5QI" id="sCC-Gf-B8c"/>
-                        <outlet property="nextLightButton" destination="Wvs-uL-otb" id="HBm-Tp-Yok"/>
-                        <outlet property="orangeTrafficLight" destination="1VE-5G-ZKW" id="pv8-aR-3Zd"/>
-                        <outlet property="redTrafficLight" destination="Z81-8k-ByM" id="ArL-hw-RX4"/>
+                        <outlet property="greenView" destination="Mv3-Ux-5QI" id="sCC-Gf-B8c"/>
+                        <outlet property="nextLightButton" destination="Wvs-uL-otb" id="IJ7-eN-ykX"/>
+                        <outlet property="orangeView" destination="1VE-5G-ZKW" id="pv8-aR-3Zd"/>
+                        <outlet property="redView" destination="Z81-8k-ByM" id="ArL-hw-RX4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
